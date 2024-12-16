@@ -40,12 +40,12 @@ export const metadata = {
     openGraph: {
         title: "Elite Rentals",
         description: "Find your perfect car rental with Elite Rentals for your next adventure. Browse our vast selection of vehicles, from economy to luxury, and enjoy a seamless booking experience.",
-        url: "",
-        siteName: 'Next.js',
+        url: "https://elite-rentals-k.vercel.app",
+        siteName: 'Elite Rentals',
         type: "website",
         images: [
             {
-                url: "",
+                url: "https://elite-rentals-k.vercel.app/images/social-media-image.jpg",
                 alt: "Elite Rentals Social Media Image",
             },
         ],
@@ -55,8 +55,7 @@ export const metadata = {
         card: "summary_large_image",
         title: "Elite Rentals",
         description: "Find your perfect car rental with Elite Rentals for your next adventure. Browse our vast selection of vehicles, from economy to luxury, and enjoy a seamless booking experience.",
-        url: "",
-        images: [""],
+        images: ["https://elite-rentals-k.vercel.app/images/social-media-image.jpg"],
     },
 
     robots: {
