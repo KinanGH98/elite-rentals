@@ -14,6 +14,7 @@ const geistSans = localFont({
 
 export const metadata = {
     applicationName: 'Elite Rentals',
+    description: "Find your perfect car rental with Elite Rentals for your next adventure. Browse our vast selection of vehicles, from economy to luxury, and enjoy a seamless booking experience.",
     authors: [{ name: 'Ahmed Kinan Ghbash' }],
     creator: 'Ahmed Kinan Ghbash',
     publisher: 'Ahmed Kinan Ghbash',

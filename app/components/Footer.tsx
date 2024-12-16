@@ -11,7 +11,7 @@ export default function Footer() {
             <nav>
                 <h6 className="footer-title">Navigation</h6>
                 <Link href={'/'} className="link link-hover">Home</Link>
-                <Link href={'/customer'} className="link link-hover">Dashboard</Link>
+                <Link href={'/customer'} className="link link-hover">Rent</Link>
                 <Link href={'/admin'} className="link link-hover">Management</Link>
             </nav>
             <nav>

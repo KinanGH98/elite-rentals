@@ -41,7 +41,7 @@ function HomePageNavBarItems({isSideBarItems}: { isSideBarItems: boolean })
 {
     return (
         <>
-            <li><NavBarLink href={'/customer'} isSideBarItem={isSideBarItems}>Dashboard</NavBarLink></li>
+            <li><NavBarLink href={'/customer'} isSideBarItem={isSideBarItems}>Rent</NavBarLink></li>
             <li><NavBarLink href={'/admin'} isSideBarItem={isSideBarItems}>Management</NavBarLink></li>
         </>
     );
