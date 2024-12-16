@@ -64,7 +64,7 @@ function ManageCard({
     return (
         <Link href={linkHref}>
             <div
-                className={`card card-compact sm:card-normal h-[250] md:h-[500] image-full w-full max-w-96 shadow-xl transform hover:scale-105 transition-transform`}>
+                className={`card card-compact sm:card-normal h-[250px] md:h-[500px] image-full w-full max-w-96 shadow-xl transform hover:scale-105 transition-transform`}>
                 <figure>
                     <Image
                         fill
