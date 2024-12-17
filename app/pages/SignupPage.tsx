@@ -26,10 +26,7 @@ export default function SignupPage({isAdmin}: { isAdmin: boolean })
 
     return (
         <div
-            className="flex flex-col w-full py-8 px-2 sm:px-8 my-auto min-h-screen h-full gap-12 pt-24 relative">
-
-            {/*<img className='z-10 mx-auto dark:content-[url(/logo-dark.svg)]' src="./logo.svg" width='250'*/}
-            {/*     alt="company-logo"/>*/}
+            className="flex flex-col w-full py-8 px-4 sm:px-10 my-auto min-h-screen h-full gap-12 pt-24 relative animate-appear">
 
             <LogoLink/>
 
@@ -56,7 +53,7 @@ export default function SignupPage({isAdmin}: { isAdmin: boolean })
                     className='link link-primary link-hover font-medium'>Log in</Link></span>
                 <span className='text-xs'>By signing up, you agree to our <a
                     className='link link-primary link-hover font-medium'
-                    href={`${process.env.NEXT_PUBLIC_BASE_URL}/privacy-policy.html`}>Privacy Policy</a>.</span>
+                    href={`/privacy-policy`}>Privacy Policy</a>.</span>
             </div>
         </div>
     );

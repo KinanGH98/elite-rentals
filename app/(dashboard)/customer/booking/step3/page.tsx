@@ -47,7 +47,7 @@ export default async function BookingStep3({searchParams}: searchParamsType)
 
     return (
         <div className="flex flex-col items-center gap-8 py-10 px-4 md:px-8 lg:px-14">
-            <ul className="steps mx-auto w-full max-w-[1000]">
+            <ul className="steps mx-auto w-full max-w-[1000px]">
                 <li className="step step-primary">Details</li>
                 <li className="step step-primary">Payment</li>
                 <li className="step step-primary">Done!</li>
@@ -142,7 +142,7 @@ function SVGDecoration()
     return (
         <>
             <svg
-                className='absolute right-0 top-0 rounded-tr-box z-0 pointer-events-none w-[800]'
+                className='absolute right-0 top-0 rounded-tr-box z-0 pointer-events-none w-[800px]'
                 id="visual" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1">
 

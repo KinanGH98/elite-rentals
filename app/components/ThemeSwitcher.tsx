@@ -17,7 +17,7 @@ export function ThemeSwitcher({className = ''}: { className?: string })
         setMounted(true)
     }, [])
 
-    if (!mounted) return <div className='mr-3 md:mr-4 dark:bg-opacity-50 skeleton h-7 w-7 rounded-lg'></div>
+    if (!mounted) return <div className='mr-1 sm:mr-2 md:mr-4 dark:bg-opacity-50 skeleton h-7 w-7 rounded-lg'></div>
 
     return (
         <Select
@@ -47,7 +47,7 @@ const options = [
 
 
 const controlStyles = {
-    base: "!min-h-4 !min-w-4 hover:cursor-pointer relative btn btn-square btn-sm btn-ghost mr-3 md:mr-4",
+    base: "!min-h-4 !min-w-4 hover:cursor-pointer relative btn btn-square btn-sm btn-ghost mr-1 sm:mr-2 md:mr-4",
     focus: "",
     nonFocus: "",
 };

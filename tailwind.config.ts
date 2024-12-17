@@ -11,6 +11,23 @@ const emeraldThemeWithoutAnimations = {
 };
 
 const config: Config = {
+    theme: {
+        extend: {
+            keyframes: {
+                appear: {
+                    "0%": {
+                        opacity: "0",
+                    },
+                    "100%": {
+                        opacity: "1",
+                    },
+                },
+            },
+            animation: {
+                "appear": "appear 0.25s ease-in-out",
+            }
+        }
+    },
     darkMode: ['class', '[data-theme="dark"]'],
     content: [
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",

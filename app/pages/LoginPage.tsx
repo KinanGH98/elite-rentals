@@ -55,7 +55,7 @@ export function LoginPage({isAdmin}: { isAdmin: boolean })
         <form action={loginAction}
               id="login-form"
               autoComplete='on'
-              className="flex flex-col w-full py-8 px-2 sm:px-8 my-auto min-h-screen h-full gap-7 justify-center relative scale-95 z-[1]">
+              className="flex flex-col w-full py-8 px-2 sm:px-8 my-auto min-h-screen h-full gap-7 justify-center relative scale-95 z-[1] animate-appear">
 
             <LogoLink className='mx-auto'/>
 

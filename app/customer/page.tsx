@@ -17,7 +17,7 @@ export default function CustomerDashboard()
             <NavBar position={'fixed'} role={'customer'}/>
             
             <div
-                className='px-4 md:px-8 lg:px-16 py-4 flex flex-col gap-4 relative min-h-[500] h-[700] md:h-screen'>
+                className='px-4 md:px-8 lg:px-16 py-4 flex flex-col gap-4 relative min-h-[500px] h-[700px] md:h-screen'>
 
                 <Image
                     src={bgImg}

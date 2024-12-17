@@ -42,15 +42,12 @@ export default function SignupWithEmailPage({isAdmin}: { isAdmin: boolean })
         <form action={signupAction}
               id="signup-form"
               autoComplete='on'
-              className="flex flex-col w-full py-8 px-10 xl:px-36 my-auto min-h-screen h-full gap-7 justify-center relative scale-95 z-[1]">
+              className="flex flex-col w-full py-8 px-2 sm:px-8 my-auto min-h-screen h-full gap-7 justify-center relative scale-95 z-[1] animate-appear">
 
             <Link href={`/auth/${isAdmin ? 'admin' : 'customer'}/signup`} title='Back'
                   className='absolute left-3 top-3 text-sm'><LeftArrowIcon/></Link>
 
             <LogoLink/>
-
-            {/*<img className=' mx-auto dark:content-[url(/logo-dark.svg)]' src="./logo.svg" width='250'*/}
-            {/*     alt="company-logo"/>*/}
 
             <h1 className='text-2xl text-center'>Sign up</h1>
 
@@ -70,7 +67,7 @@ export default function SignupWithEmailPage({isAdmin}: { isAdmin: boolean })
                     className='link link-primary link-hover font-medium'>Log in</Link></span>
 
                 <span className='text-xs'>By signing up, you agree to our <a
-                    className='link link-primary link-hover font-medium' href="../privacy-policy.html">Privacy Policy</a>.</span>
+                    className='link link-primary link-hover font-medium' href={`/privacy-policy`}>Privacy Policy</a>.</span>
             </div>
         </form>
     );

@@ -6,6 +6,7 @@ import {toast} from "react-toastify";
 import {FormEvent, useState} from "react";
 import dynamic from "next/dynamic";
 import {useRouter} from "next/navigation";
+import {MoonLoader} from "react-spinners";
 
 const Map = dynamic(() => import('@/app/components/Map'), {
     ssr: false,
@@ -17,6 +18,7 @@ const inputCommonStyles = 'input input-ghost font-bold lg:h-auto p-0 bg-transpar
 export default function FindCarForm()
 {
     const [deliveryLocation, setDeliveryLocation] = useState({})
+    const [isLoading, setIsLoading] = useState(false)
     const router = useRouter();
 
     async function handleSubmit(e: FormEvent<HTMLFormElement>)
@@ -29,6 +31,7 @@ export default function FindCarForm()
             return;
         }
 
+        setIsLoading(true);
         const formData = new FormData(e.currentTarget);
         const data = JSON.stringify(Object.fromEntries(formData) as unknown);
 
@@ -41,7 +44,7 @@ export default function FindCarForm()
                   id='search-for-car-form'
                   className="flex flex-col lg:flex-row w-full bg-white dark:bg-neutral shadow-md p-2 rounded-lg 
                              md:mt-auto my-auto md:my-0 md:mb-14 
-                             md:max-w-[600] md:mx-auto
+                             md:max-w-[600px] md:mx-auto
                              lg:max-w-none lg:mx-0
                              bg-opacity-50 dark:bg-opacity-70 backdrop-blur-md">
             
@@ -66,8 +69,9 @@ export default function FindCarForm()
                             className='btn btn-ghost lg:!min-h-7 lg:!h-7 font-bold !text-base !p-0 justify-start transition-[transform] !text-left inline-flex center-on-focus'>
                         {isDeliveryLocationNull(deliveryLocation)
                             ? <span>Pick Location</span>
-                            : <span className='inline-flex justify-center items-center gap-1'>
-                                <CheckmarkCircle className='inline-block text-success dark:text-primary' width={'1.4rem'}/> Location Set
+                            : <span className='inline-flex justify-center items-center gap-1 text-nowrap'>
+                                <CheckmarkCircle className='inline-block text-success dark:text-primary'
+                                                 width={'1.4rem'}/> Location Set
                             </span>}
                     </button>
                 </span>
@@ -81,11 +85,16 @@ export default function FindCarForm()
                 </span>
 
                 <span
-                    className="lg:h-20 flex flex-col grow justify-between p-3 lg:p-0.5 ">
+                    className="lg:h-20 flex flex-col grow justify-between p-3 lg:p-0.5">
                     <button
+                        disabled={isLoading}
                         className="h-full btn btn-primary flex lg:flex-col justify-center p-3 font-bold lg:text-xs relative min-w-48">
-                        <CalendarIcon width={25} height={25} className='lg:static absolute left-4'/>
-                        Book Now
+                        {isLoading ? <MoonLoader size='18px'/>
+                            :
+                            <>
+                                <CalendarIcon width={25} height={25} className='lg:static absolute left-4'/>
+                                Book Now
+                            </>}
                     </button>
                 </span>
             </form>
@@ -100,9 +109,11 @@ export default function FindCarForm()
                     <div className="w-full h-4/5 rounded-lg overflow-hidden mb-3">
                         <Map onLocationSelect={setDeliveryLocation}/>
                     </div>
-                    <button className='btn btn-ghost text-primary ml-auto' type='button' disabled={isDeliveryLocationNull(deliveryLocation)}
+                    <button className='btn btn-ghost text-primary ml-auto' type='button'
+                            disabled={isDeliveryLocationNull(deliveryLocation)}
                             onClick={() => (document.getElementById('location-pick-modal') as HTMLDialogElement).close()}
-                    >Done</button>
+                    >Done
+                    </button>
                 </div>
                 <form method="dialog" className="modal-backdrop">
                     <button>close</button>

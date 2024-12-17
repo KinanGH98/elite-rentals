@@ -5,19 +5,14 @@ import {LatLngTuple} from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import {toast} from "react-toastify";
 import L from 'leaflet';
-import icon from 'leaflet/dist/images/marker-icon.png';
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
-// Set up the default icon for markers
-
-const DefaultIcon = L.icon({
-// @ts-ignore
-    iconUrl: icon,
-// @ts-ignore
-    shadowUrl: iconShadow,
+// Set up the map marker icon.
+L.Marker.prototype.options.icon = L.icon({
+    iconUrl: "/images/leaflet/marker-icon.png",
+    shadowUrl: "/images/leaflet/marker-shadow.png",
+    iconSize: [25,41], 
+    iconAnchor: [12,41]
 });
-
-L.Marker.prototype.options.icon = DefaultIcon;
 
 interface MapProps
 {

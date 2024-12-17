@@ -52,7 +52,7 @@ export default function BookingStep1PageContent({car, rentDate, deliveryLocation
     return (
         <div className="flex flex-col gap-8 py-10 px-4 md:px-8 lg:px-14">
 
-            <ul className="steps mx-auto w-full max-w-[1000]">
+            <ul className="steps mx-auto w-full max-w-[1000px]">
                 <li className="step step-primary">Details</li>
                 <li className="step ">Checkout</li>
                 <li className="step">Done!</li>
