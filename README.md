@@ -1,6 +1,6 @@
 # Elite Rentals
 
-![Elite Rentals](https://elite-rentals-k.vercel.app/images/social-media-image.jpg)
+![Elite Rentals](https://elite-rentals.vercel.app/images/social-media-image.jpg)
 
 ## Overview
 Elite Rentals is a car rental platform designed to provide a seamless experience for both administrators and customers. It features an intuitive UI, robust authentication, and dynamic pages for managing cars, bookings, and more.
