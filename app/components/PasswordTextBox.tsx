@@ -1,6 +1,6 @@
 ﻿'use client'
 import {useState} from "react";
-import {EyeClosedIcon, EyeIcon} from "@/app/icons";
+import {FaEye, FaEyeSlash} from "react-icons/fa6";
 
 interface TextBoxProps
 {
@@ -31,8 +31,8 @@ export default function PasswordTextBox({id, label, placeholder, defaultValue = 
                 placeholder={placeholder}/>
 
             <button onClick={() => setInputType(currentType => currentType === 'password' ? 'text' : 'password')}
-                    type='button' className='absolute right-4 top-[40px]'>
-                {inputType === 'password' ? <EyeClosedIcon/> : <EyeIcon/>}
+                    type='button' className='absolute right-4 top-[43px]'>
+                {inputType === 'password' ? <FaEyeSlash size={'1.2rem'}/> : <FaEye size={'1.2rem'}/>}
             </button>
         </div>
     );

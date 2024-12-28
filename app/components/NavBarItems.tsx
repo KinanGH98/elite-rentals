@@ -1,6 +1,7 @@
 ﻿'use client'
 import Link from "next/link";
 import {ReactNode} from "react";
+import {FaCalendar, FaCar, FaCoins, FaGear} from "react-icons/fa6";
 
 export default function NavBarItems({role, isSideBarItems = false}: {
     role: 'admin' | 'customer' | '',
@@ -22,8 +23,13 @@ function AdminNavBarItems({isSideBarItems}: { isSideBarItems: boolean })
 {
     return (
         <>
-            <li><NavBarLink href={'/admin/bookings'} isSideBarItem={isSideBarItems}>Bookings</NavBarLink></li>
-            <li><NavBarLink href={'/admin/cars'} isSideBarItem={isSideBarItems}>Cars</NavBarLink></li>
+            <li><NavBarLink href={'/admin/bookings'} isSideBarItem={isSideBarItems}>
+                {isSideBarItems && <FaCalendar/>}
+                Bookings</NavBarLink></li>
+            
+            <li><NavBarLink href={'/admin/cars'} isSideBarItem={isSideBarItems}>
+                {isSideBarItems && <FaCar/>}
+                Cars</NavBarLink></li>
         </>
     );
 }
@@ -32,7 +38,9 @@ function CustomerNavBarItems({isSideBarItems}: { isSideBarItems: boolean })
 {
     return (
         <>
-            <li><NavBarLink href={'/customer/bookings'} isSideBarItem={isSideBarItems}>Bookings</NavBarLink></li>
+            <li><NavBarLink href={'/customer/bookings'} isSideBarItem={isSideBarItems}>
+                {isSideBarItems && <FaCalendar/>}
+                Bookings</NavBarLink></li>
         </>
     );
 }
@@ -41,8 +49,14 @@ function HomePageNavBarItems({isSideBarItems}: { isSideBarItems: boolean })
 {
     return (
         <>
-            <li><NavBarLink href={'/customer'} isSideBarItem={isSideBarItems}>Rent</NavBarLink></li>
-            <li><NavBarLink href={'/admin'} isSideBarItem={isSideBarItems}>Management</NavBarLink></li>
+            <li><NavBarLink href={'/customer'} isSideBarItem={isSideBarItems}>
+                {isSideBarItems && <FaCoins/>}
+                Rent</NavBarLink></li>
+            <li>
+                <NavBarLink href={'/admin'} isSideBarItem={isSideBarItems}>
+                    {isSideBarItems && <FaGear/>}
+                    Management</NavBarLink>
+            </li>
         </>
     );
 }

@@ -66,10 +66,10 @@ export default function FindCarForm()
                 
                     <button type='button'
                             onClick={() => (document.getElementById('location-pick-modal') as HTMLDialogElement).showModal()}
-                            className='btn btn-ghost lg:!min-h-7 lg:!h-7 font-bold !text-base !p-0 justify-start transition-[transform] !text-left inline-flex center-on-focus'>
+                            className='btn btn-ghost lg:!min-h-7 lg:!h-7 font-bold !text-base !p-0 justify-start transition-[transform] !text-left inline-flex center-on-focus text-nowrap'>
                         {isDeliveryLocationNull(deliveryLocation)
                             ? <span>Pick Location</span>
-                            : <span className='inline-flex justify-center items-center gap-1 text-nowrap'>
+                            : <span className='inline-flex justify-center items-center gap-1'>
                                 <CheckmarkCircle className='inline-block text-success dark:text-primary'
                                                  width={'1.4rem'}/> Location Set
                             </span>}

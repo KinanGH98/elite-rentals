@@ -3,7 +3,7 @@ import ReactSelect, {Props as SelectProps} from 'react-select';
 import clsx from "clsx";
 
 const controlStyles = {
-    base: "bg-none hover:cursor-pointer select select-bordered relative !transition-[border] !duration-[100ms] !ease-[cubic-bezier(.4,0,.2,1)]",
+    base: "bg-none hover:cursor-pointer select !select-bordered relative !transition-[border] !duration-[100ms] !ease-[cubic-bezier(.4,0,.2,1)]",
     focus: "",
     nonFocus: "",
 };

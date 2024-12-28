@@ -66,7 +66,7 @@ export default async function CustomerCarsPage({searchParams}: {
         <div className='flex flex-col gap-8 py-10 pb-0 px-4 md:px-8 lg:px-14'>
 
             <FeaturedCarsCarousel
-                className={'w-full h-auto mt-8 md:bg-gradient-to-bl from-zinc-700 to-stone-900 dark:bg-none dark:bg-base-100 md:rounded-3xl md:shadow-lg md:!p-4'}
+                className={'w-full h-auto mt-8 md:bg-gradient-to-bl from-zinc-700 to-stone-900 dark:bg-none dark:md:bg-base-100 md:rounded-3xl md:shadow-lg md:!p-4'}
                 rentDate={pickupData}
                 deliveryLocation={deliveryLocation}
                 cars={featuredCars}/>

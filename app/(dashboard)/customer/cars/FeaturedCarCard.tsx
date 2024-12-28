@@ -82,7 +82,7 @@ function FeaturedCarCard({props, href}: { props: Car, href: string })
     return (
         <Link href={href}
               className='card card-compact rounded-3xl overflow-hidden 
-              bg-transparent bg-gray-100 w-full h-44 relative group lg:scale-90'>
+              bg-transparent w-full h-44 relative group lg:scale-90'>
             
             <span
                 className='p-3 px-5 bg-gradient-to-b from-black/80 via-black/60 to-transparent text-white'>

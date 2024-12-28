@@ -11,8 +11,9 @@ export default function CarCard({props, href, rentDaysCount}: {
 })
 {
     return (
-        <div
-            className="card bg-base-100 rounded-box overflow-hidden w-full  shadow-lg hover:shadow-xl transition-shadow">
+        <Link
+            className="card bg-base-100 rounded-box overflow-hidden w-full shadow-lg hover:shadow-xl transition-shadow group"
+            href={href}>
 
             <figure className="relative h-56 w-full rounded-t-lg overflow-hidden">
                 <Image
@@ -35,9 +36,9 @@ export default function CarCard({props, href, rentDaysCount}: {
 
 
                 <div className="card-actions items-center relative">
-                    <Link
-                        className='group w-52 h-16 -mr-6 -mb-7 ml-auto bg-neutral rounded-full justify-center items-center rounded-r-none flex  relative'
-                        href={href}>
+                    <div
+                        className='w-52 h-16 -mr-6 -mb-7 ml-auto bg-neutral rounded-full justify-center items-center rounded-r-none flex  relative'
+                    >
                                        <span
                                            className='btn btn-primary btn-circle btn-sm border-0 absolute left-4 top-4 transition-[padding] group-hover:pl-2'><RightArrowIcon/></span>
 
@@ -46,10 +47,10 @@ export default function CarCard({props, href, rentDaysCount}: {
                                     className="text-sm font-medium text-slate-300">Price for {rentDaysCount} days:</span>
                             <h3 className="font-bold text-lg text-primary">${props.price_per_day * rentDaysCount}</h3>
                         </div>
-                    </Link>
+                    </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }
 

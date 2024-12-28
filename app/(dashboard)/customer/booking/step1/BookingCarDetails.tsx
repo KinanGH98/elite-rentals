@@ -79,14 +79,14 @@ function IconsSection({props}: { props: Car })
                     </div>
                 </div>
                 
-                <div className="tooltip" data-tip="Price per day">
+                <div className="tooltip z-20" data-tip="Price per day">
                     <div className="flex items-center gap-2">
                         <FaDollarSign className='text-primary size-[1.3em]'/>
                         <span>{props.price_per_day}<span className="text-gray-500 text-sm">/day</span></span>
                     </div>
                 </div>
                 
-                <div className="tooltip" data-tip="Rating">
+                <div className="tooltip z-20" data-tip="Rating">
                     <div className="flex items-center gap-2">
                         <FaStar className='text-primary size-[1.3em]'/>
                         <span>5 <span className="text-sm text-gray-500">(273 ratings)</span></span>
